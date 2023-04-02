@@ -1180,12 +1180,12 @@
 #define STEP_STATE_X HIGH
 #define STEP_STATE_Y HIGH
 #define STEP_STATE_Z HIGH
-#define STEP_STATE_I HIGH
-#define STEP_STATE_J HIGH
-#define STEP_STATE_K HIGH
-#define STEP_STATE_U HIGH
-#define STEP_STATE_V HIGH
-#define STEP_STATE_W HIGH
+//#define STEP_STATE_I HIGH
+//#define STEP_STATE_J HIGH
+//#define STEP_STATE_K HIGH
+//#define STEP_STATE_U HIGH
+//#define STEP_STATE_V HIGH
+//#define STEP_STATE_W HIGH
 #define STEP_STATE_E HIGH
 
 /**
@@ -3114,12 +3114,12 @@
   #if HAS_STEALTHCHOP
     #define STEALTHCHOP_XY
     #define STEALTHCHOP_Z
-    #define STEALTHCHOP_I
-    #define STEALTHCHOP_J
-    #define STEALTHCHOP_K
-    #define STEALTHCHOP_U
-    #define STEALTHCHOP_V
-    #define STEALTHCHOP_W
+    //#define STEALTHCHOP_I
+    //#define STEALTHCHOP_J
+    //#define STEALTHCHOP_K
+    //#define STEALTHCHOP_U
+    //#define STEALTHCHOP_V
+    //#define STEALTHCHOP_W
     //#define STEALTHCHOP_E
   #endif
 

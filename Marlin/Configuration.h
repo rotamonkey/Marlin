@@ -672,13 +672,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  42.7808,  42.7808 }
-    #define DEFAULT_Ki_LIST {   8.2421,   8.2421 }
-    #define DEFAULT_Kd_LIST { 55.5135, 55.5135 }
+    #define DEFAULT_Kp_LIST {  30.8794,  30.8794 }
+    #define DEFAULT_Ki_LIST {   2.7001,   2.7001 }
+    #define DEFAULT_Kd_LIST { 88.2881, 88.2881 }
   #else
-    #define DEFAULT_Kp  42.7808
-    #define DEFAULT_Ki   8.2421
-    #define DEFAULT_Kd 55.5135
+    #define DEFAULT_Kp  30.8794
+    #define DEFAULT_Ki   2.7001
+    #define DEFAULT_Kd 88.2881
   #endif
 #endif
 
@@ -1175,18 +1175,18 @@
 #define Y_MAX_ENDSTOP_HIT_STATE HIGH
 #define Z_MIN_ENDSTOP_HIT_STATE HIGH
 #define Z_MAX_ENDSTOP_HIT_STATE HIGH
-#define I_MIN_ENDSTOP_HIT_STATE HIGH
-#define I_MAX_ENDSTOP_HIT_STATE HIGH
-#define J_MIN_ENDSTOP_HIT_STATE HIGH
-#define J_MAX_ENDSTOP_HIT_STATE HIGH
-#define K_MIN_ENDSTOP_HIT_STATE HIGH
-#define K_MAX_ENDSTOP_HIT_STATE HIGH
-#define U_MIN_ENDSTOP_HIT_STATE HIGH
-#define U_MAX_ENDSTOP_HIT_STATE HIGH
-#define V_MIN_ENDSTOP_HIT_STATE HIGH
-#define V_MAX_ENDSTOP_HIT_STATE HIGH
-#define W_MIN_ENDSTOP_HIT_STATE HIGH
-#define W_MAX_ENDSTOP_HIT_STATE HIGH
+//#define I_MIN_ENDSTOP_HIT_STATE HIGH
+//#define I_MAX_ENDSTOP_HIT_STATE HIGH
+//#define J_MIN_ENDSTOP_HIT_STATE HIGH
+//#define J_MAX_ENDSTOP_HIT_STATE HIGH
+//#define K_MIN_ENDSTOP_HIT_STATE HIGH
+//#define K_MAX_ENDSTOP_HIT_STATE HIGH
+//#define U_MIN_ENDSTOP_HIT_STATE HIGH
+//#define U_MAX_ENDSTOP_HIT_STATE HIGH
+//#define V_MIN_ENDSTOP_HIT_STATE HIGH
+//#define V_MAX_ENDSTOP_HIT_STATE HIGH
+//#define W_MIN_ENDSTOP_HIT_STATE HIGH
+//#define W_MAX_ENDSTOP_HIT_STATE HIGH
 #define Z_MIN_PROBE_ENDSTOP_HIT_STATE HIGH
 
 // Enable this feature if all enabled endstop pins are interrupt-capable.
@@ -1553,7 +1553,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -45, 1, -3.8200 }
+#define NOZZLE_TO_PROBE_OFFSET { -45, 1, -3.50 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
