@@ -761,7 +761,9 @@ float Probe::run_z_probe(const bool sanity_check/*=true*/) {
     if (DEBUGGING(LEVELING)) DEBUG_ECHOLNPGM("1st Probe Z:", first_probe_z);
 
     // Raise to give the probe clearance
-    do_z_clearance(Z_CLEARANCE_MULTI_PROBE);
+    //do_z_clearance(Z_CLEARANCE_MULTI_PROBE);
+    //MOD below from https://github.com/MarlinFirmware/Marlin/pull/25631/files
+    do_z_clearance(current_position.z + Z_CLEARANCE_MULTI_PROBE);
 
   #elif Z_PROBE_FEEDRATE_FAST != Z_PROBE_FEEDRATE_SLOW
 
@@ -771,7 +773,9 @@ float Probe::run_z_probe(const bool sanity_check/*=true*/) {
     if (current_position.z > z) {
       // Probe down fast. If the probe never triggered, raise for probe clearance
       if (!probe_down_to_z(z, z_probe_fast_mm_s))
-        do_z_clearance(Z_CLEARANCE_BETWEEN_PROBES);
+        //do_z_clearance(Z_CLEARANCE_BETWEEN_PROBES);
+        //MOD below from https://github.com/MarlinFirmware/Marlin/pull/25631/files
+        do_z_clearance(current_position.z + Z_CLEARANCE_BETWEEN_PROBES);
     }
   #endif
 
@@ -823,7 +827,10 @@ float Probe::run_z_probe(const bool sanity_check/*=true*/) {
           #if EXTRA_PROBING > 0
             < TOTAL_PROBING - 1
           #endif
-        ) do_z_clearance(Z_CLEARANCE_MULTI_PROBE);
+        //) do_z_clearance(Z_CLEARANCE_MULTI_PROBE);
+        //MOD below from https://github.com/MarlinFirmware/Marlin/pull/25631/files
+        ) do_z_clearance(current_position.z + Z_CLEARANCE_MULTI_PROBE);
+        
       #endif
     }
 
@@ -968,7 +975,9 @@ float Probe::probe_at_point(const_float_t rx, const_float_t ry, const ProbePtRai
     switch (raise_type) {
       default: break;
       case PROBE_PT_RAISE:
-        do_z_clearance(Z_CLEARANCE_BETWEEN_PROBES);
+        //do_z_clearance(Z_CLEARANCE_BETWEEN_PROBES);
+        //MOD below from https://github.com/MarlinFirmware/Marlin/pull/25631/files
+        do_z_clearance(current_position.z + Z_CLEARANCE_BETWEEN_PROBES); //Always want to lift by the whole clearance amount when the probe triggers
         break;
       case PROBE_PT_STOW: case PROBE_PT_LAST_STOW:
         if (stow()) measured_z = NAN;   // Error on stow?

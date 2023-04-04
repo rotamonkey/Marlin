@@ -22,6 +22,8 @@
 #pragma once
 
 #include "../inc/MarlinConfigPre.h"
+//MOD below from https://github.com/MarlinFirmware/Marlin/pull/25631/files
+#include "../module/probe.h"
 
 // BLTouch commands are sent as servo angles
 typedef unsigned char BLTCommand;
@@ -76,7 +78,9 @@ public:
     static constexpr bool high_speed_mode = false;
   #endif
 
-  static float z_extra_clearance() { return high_speed_mode ? 7 : 0; }
+//  static float z_extra_clearance() { return high_speed_mode ? 7 : 0; }
+//MOD below from https://github.com/MarlinFirmware/Marlin/pull/25631/files
+  static float z_extra_clearance() { return high_speed_mode ? -probe.offset.z : 0; }
 
   // DEPLOY and STOW are wrapped for error handling - these are used by homing and by probing
   static bool deploy()              { return deploy_proc(); }
