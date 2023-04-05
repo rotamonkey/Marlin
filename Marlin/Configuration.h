@@ -672,13 +672,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  30.8794,  30.8794 }
-    #define DEFAULT_Ki_LIST {   2.7001,   2.7001 }
-    #define DEFAULT_Kd_LIST { 88.2881, 88.2881 }
+    #define DEFAULT_Kp_LIST {  30.6632,  30.6632 }
+    #define DEFAULT_Ki_LIST {   2.4415,   2.4415 }
+    #define DEFAULT_Kd_LIST { 96.2746, 96.2746 }
   #else
-    #define DEFAULT_Kp  30.8794
-    #define DEFAULT_Ki   2.7001
-    #define DEFAULT_Kd 88.2881
+    #define DEFAULT_Kp  30.6632
+    #define DEFAULT_Ki   2.4415
+    #define DEFAULT_Kd 96.2746
   #endif
 #endif
 
@@ -1553,7 +1553,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -45, 1, -3.50 }
+#define NOZZLE_TO_PROBE_OFFSET { -45, 1, -3.68 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
