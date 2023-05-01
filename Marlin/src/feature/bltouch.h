@@ -23,7 +23,7 @@
 
 #include "../inc/MarlinConfigPre.h"
 //MOD below from https://github.com/MarlinFirmware/Marlin/pull/25631/files
-#include "../module/probe.h"
+//#include "../module/probe.h"
 
 // BLTouch commands are sent as servo angles
 typedef unsigned char BLTCommand;
