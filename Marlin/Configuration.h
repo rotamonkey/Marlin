@@ -666,13 +666,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  30.6632,  30.6632 }
-    #define DEFAULT_Ki_LIST {   2.4415,   2.4415 }
-    #define DEFAULT_Kd_LIST { 96.2746, 96.2746 }
+    #define DEFAULT_Kp_LIST {  15.1409,  15.1409 }
+    #define DEFAULT_Ki_LIST {   2.0835,   2.0835 }
+    #define DEFAULT_Kd_LIST { 27.5072, 27.5072 }
   #else
-    #define DEFAULT_Kp  30.6632
-    #define DEFAULT_Ki   2.4415
-    #define DEFAULT_Kd 96.2746
+    #define DEFAULT_Kp  15.1409
+    #define DEFAULT_Ki   2.0835
+    #define DEFAULT_Kd 27.5072
   #endif
 #endif
 
@@ -1243,8 +1243,8 @@
  *   M204 T    Travel Acceleration
  */
 #define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  1500    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   1500    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_RETRACT_ACCELERATION  1200    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   1200    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
